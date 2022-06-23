@@ -1,0 +1,58 @@
+{
+  "name": "pangujs-flow",
+  "description": "基于x6图编辑引擎开发的建模流程编辑器",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-layout": "^6.5.0",
+    "@antv/x6": "^1.32.3",
+    "@antv/x6-react-components": "^1.1.15",
+    "@antv/x6-react-shape": "^1.6.0",
+    "ahooks": "^3.5.0",
+    "antd": "^4.21.3",
+    "classnames": "^2.3.1",
+    "dompurify": "^2.3.8",
+    "lodash-es": "^4.17.21",
+    "marked": "^4.0.17",
+    "react": "17.x",
+    "react-dnd": "^11.1.3",
+    "react-dnd-html5-backend": "^11.1.3",
+    "react-dom": "17.x",
+    "rxjs": "^7.5.5",
+    "umi": "^3.5.26"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^2.3.3",
+    "@types/lodash-es": "^4.17.6",
+    "@types/marked": "^4.0.3",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.5.26",
+    "babel-plugin-import": "^1.13.5",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  }
+}
