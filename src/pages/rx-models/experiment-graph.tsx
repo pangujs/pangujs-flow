@@ -721,7 +721,7 @@ class ExperimentGraph extends GraphCore<BaseNode, BaseEdge> {
   // 发起请求删除边
   requestDeleteEdges = async (edges: BaseEdge | BaseEdge[]) => {
     const targetEdges: BaseEdge[] = ([] as any[]).concat(edges);
-    console.log(targetEdges);
+
     this.deleteEdges(targetEdges);
     this.delExperimentGraphElement(
       [],
@@ -793,8 +793,6 @@ class ExperimentGraph extends GraphCore<BaseNode, BaseEdge> {
 }
 
 export const gModelMap = new Map<string, ExperimentGraph>(); // 存储实验图的 model
-
-console.log(gModelMap);
 
 export const useExperimentGraph = (experimentId: number | string) => {
   const expId = experimentId.toString();
